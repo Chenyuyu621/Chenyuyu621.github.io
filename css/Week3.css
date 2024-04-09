@@ -1,0 +1,81 @@
+body {
+    background-color: #D6D6CE;
+    color: #800000;
+  }
+  
+  .header {
+    background-color: #D6D6CE;
+    color: #800000;
+  }
+  
+  .footer {
+    background-color: #767676;
+    color: #D6D6CE;
+  }/*# sourceMappingURL=Project.css.map */
+
+h1, h2, p {
+    color: inherit; 
+}
+
+h1 {
+    color: #800000; /* Official maroon color of the University of Chicago */
+}
+
+.additional-paragraphs {
+    font-style: italic; /* Makes text of elements with this class italic */
+}
+
+/* only applied another font and color to the contact informtation table */
+table.table {
+    font-family: 'Oswald', sans-serif; 
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+table.table th, table.table td {
+    color: #0d0e0d; 
+}
+
+/* Style for links outside the navbar */
+a.content-link {
+    color: #e91667; 
+    text-decoration: none; /* Removes underline */
+}
+
+a.content-link:link {
+    color: #e91667; /* Color for normal state links */
+}
+
+a.content-link:visited {
+    color: #642db7; /* Darker color for visited links */
+}
+
+a.content-link:hover {
+    color: #003580; /* Color for hover state */
+}
+
+a.content-link:active {
+    color: #001740; 
+}
+
+li::first-letter{
+    font-size: 200%;
+    font-weight: bold;
+    color: maroon;
+}
+
+
+
+/* CSS for ordered and unordered lists */
+/* First Ordered List - Lowercase Roman Numerals */
+ol.a {list-style-type: lower-roman;}
+
+/* Second Ordered List - Lowercase Letters */
+ol.b {list-style-type: lower-alpha;}
+
+/* First Unordered List - Squares */
+ul.c {list-style-type: square;}
+
+/* Second Unordered List - Dollar Signs */
+ul.d {list-style-type: "$";}

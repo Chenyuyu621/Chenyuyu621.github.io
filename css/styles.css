@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    color: #38d038; /* Bright green color */
+    font-family: 'Courier New', monospace;
+}
+
+h1, h2, h3, p {
+    color: inherit; 
+}
+
+h1 {
+    color: #800000; /* Official maroon color of the University of Chicago */
+}
+
+.additional-paragraphs {
+    font-style: italic; /* Makes text of elements with this class italic */
+}
+
+
