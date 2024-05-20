@@ -2,275 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Chalkboard 6</title>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/uchicago_format.css">
-    <title>Index</title>
-
-    <title>Digital Chalkboard Week 7</title>
-    <!--BootStrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- css file -->
-    <link rel="stylesheet" href="/css/wk7.css">
-    <!-- Favicon file -->
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <style>
-        .uniform-height-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-    </style>
-    
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Play:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/uchicago_format.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Digital Chalkboard</a>
-                <img src="/images/money.png" alt="logo" width="30" height="24">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/FAQ.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Contact.html Page.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/About.html">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Digital Chalkboard
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/dc/wk4.html">week 4</a></li>
-                            <li><a class="dropdown-item" href="/dc/wk5.html">week 5</a></li>
-                            <li><a class="dropdown-item" href="/dc/wk6.html">week 5</a></li>
-                        </ul>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Technical Presentation
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/tp/week4.html">week 4</a></li>
-                            <li><a class="dropdown-item" href="/tp/week5.html">week 5</a></li>
-                            <li><a class="dropdown-item" href="/tp/week5.html">week 5</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex ms-auto" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main content with container -->
-    <div class="container mt-4">
-        <h1>Week 7: Digital Chalkboard and Technical Presentation</h1>
-        <!-- New row with columns -->
-        <div class="row gx-5 gy-5">
-            <div class="col-12 col-sm-6 col-md-3 col-background px-3 py-3">The University of Chicago’s program in Digital Studies of Language, Culture, and History provides a one-year Master of Arts curriculum intended for full-time students who have a bachelor’s degree in the humanities or in a related discipline such as history, anthropology, or linguistics.</div>
-            <div class="col-sm-3 col-background px-4 py-3">This website is used in DIGS 20005/30005 Data Publication for the Humanities. We are working with HTML, CSS, JS, XSLT, and Python for web development in the context of the Humanities. </div>
-            <div class="col-sm-3 col-background px-4 py-3"> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-            <div class="col-sm-3 col-background px-4 py-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-        </div>
-        <!-- Buttons -->
-        <div class="row mt-4">
-            <div class="col text-center">
-                <button id="button1" class="btn btn-primary">UCicago DIGS</button>
-                <button id="button2" class="btn btn-secondary">DIGS Canvas</button>
-            </div>
-        </div>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-4 col-12"><img src="/images/dog.png" alt="pic1" class="img-fluid"></div>
-
-                <div class="col-md-4 col-12"><img src="/images/doggie.jpeg" alt="pic2" class="img-fluid"></div>
-                <div class="col-md-4 col-12"><img src="/images/elephant.jpeg" alt="pic3" class="img-fluid"></div>
-            </div>
-        </div>
-        <div class=""col-sm-4">
-            <p>These are the three cute animal images</p>
-            <p><del>These are the three cute animal images</del></p>
-            <p><u>These are the three cute animal images</u></p>
-            <p><strong>These are the three cute animal images</strong></p>
-            <p><em>These are the three cute animal images</em></p>
-            <p><code>These are the three cute animal images</code></p>
-            <p><kbd>These are the three cute animal images</kbd></p>
-            <dt>Animal</dt>
-            <dd>- dog</dd>
-            <dd>- doggie</dd>
-            <dd>- elephant</dd>
-        </div>
-        <div>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button 
-                            class="accordion-button" 
-                            type="button" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#collapseOne" 
-                            aria-expanded="true" 
-                            aria-controls="collapseOne"
-                            >
-                            Animal
-                        </button>
-                    </h2>
-
-                    <div 
-                        id="collapseOne" 
-                        class="accordion-collapse collapse show" 
-                        aria-labelledby="headingOne" 
-                        data-bs-parent="#accordionExample"
-                        >
-                        <div class="accordion-body">
-                            <strong>dog</strong>  
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat for more items -->
-            </div> 
-        </div>
-        <div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/images/dog.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption">
-                            <h3>Doggie</h3>
-                            <p>Cute!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/elephant.jpeg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption">
-                            <h3>Elephant</h3>
-                            <p>Cute!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/doggie.jpeg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption">
-                            <h3>Dog</h3>
-                            <p>Cute!</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        <div class="container mt-4">
-            <h1>Play Audio with Howler.js</h1>
-            <button id="play">Play</button>
-            <button id="pause">Pause</button>
-            <button id="stop">Stop</button>
-
-                <!-- Trivia question form -->
-            <div class="mb-3">
-                    <label for="triviaInput" class="form-label">Trivia Question: What year was the University of Chicago founded?</label>
-                    <input type="text" class="form-control" id="triviaInput" placeholder="Enter your answer">
-                    <button id="triviaButton" class="btn btn-primary mt-2">Check Answer</button>
-                    <div id="triviaResult"></div>
-            </div>
-            
-                <!-- Number check form -->
-            <div class="mb-3">
-                    <label for="numberInput" class="form-label">Enter a 5-digit number:</label>
-                    <input type="text" class="form-control" id="numberInput" placeholder="12345">
-                    <button id="numberButton" class="btn btn-primary mt-2">Check Number</button>
-                    <div id="numberResult"></div>
-             </div>                 
-        </div> 
-        <div class="container mt-4">
-            <p1>Default values: Watermelon, Apple, Orange, Kiwi,Blueberry, Mango, Peach</p1>
-            <button class="btn btn-info" onclick="lastItem(['Watermelon', 'Apple', 'Orange', 'Kiwi', 'Blueberries', 'Mango', 'Peach'])">Show Last Item</button>
-            <div id="lastItemOutput"></div>
-        </div>
-        <div class="container mt-4">
-            <button class="btn btn-warning" onclick="sortUserInputs()">Sort User Items</button>
-            <div id="userInputsOutput"></div>
-        </div> 
-        <div class="container" style="width: 400px; height: 400px;"> <!--Line chart-->
-            <canvas class="chart_container" id="lineChart"></canvas>
-        </div>
-        <div class="container" style="width: 400px; height: 400px;"> <!--Pie chart-->
-            <canvas class="chart_container_pie"id="myPieChart" ></canvas>
-        </div>
-        <div>
-            <div id="map" style="width: 600px; height: 400px;"></div>
-            <script src="/js/wk7.js"></script>
-        </div>
-        <div>
-            <div class="container mt-5">
-                <div id="content" class="text-center"></div>
-                <a href="page1.html?uuid=6f18e3a7-a396-46d9-85cb-92674c24cfc0" class="btn btn-primary">View First Item</a>
-                <a href="page2.html?uuid=50f7b9a5-329a-49ab-85e2-f8fb4ee6e867" class="btn btn-secondary">View Second Item</a>
-            <script src="/js/wk7.js"></script>
-        </div>
-
+  <!--Nav Bar-->
+  <div id="nav-placeholder"></div>
+  <!--End Nav Bar-->
+    <div class="container-fluid container-content">
+      <h1>Digital Chalkboard 6</h1>
+      <div id="map" style="height:700px;"></div>
     </div>
     
-
-    <!-- JavaScript for Buttons -->
-    <script>
-    document.addEventListener("click", function() {
-        document.getElementById("button1").addEventListener("click", greetUser);
-        document.getElementById("button2").addEventListener("click", changeButtonTextAndClass);
-    });
-
-    function greetUser() {
-        const now = new Date();
-        const hour = now.getHours();
-        let greeting;
-
-        if (hour > 5 && hour < 11) {
-            greeting = "Good morning!";
-        } else if (hour < 18) {
-            greeting = "Good day!";
-        } else {
-            greeting = "Good evening!";
-        }
-
-        alert(greeting);
-    }
+    <!--Footer-->
+    <div id="footer-placeholder"></div>
+    <!--End Footer-->
         
-    function changeButtonTextAndClass() {
-        let button = document.getElementById('button2');
-        console.log("Before change:", button.textContent, button.className);
-        
-        button.textContent = "Done";
-        button.className = "btn btn-success";
-        
-        console.log("After change:", button.textContent, button.className);
-    }
-
-    </script>
-    
-    <!-- Include Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <script src="/js/wk7.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../js/wk7.js"></script>
 </body>
 </html>

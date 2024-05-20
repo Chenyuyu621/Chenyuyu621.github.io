@@ -1,0 +1,54 @@
+a {
+    text-decoration: none; 
+}
+
+a:link {
+    color: hotpink;  
+}
+
+a:visited {
+    color: red;  
+}
+
+a:hover {
+    color: darkblue;
+}
+
+h1::first-letter {
+    color: maroon;
+    font-size: 50px;
+}
+
+li.format::first-letter {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.table {
+    font-family: "Play", sans-serif;
+    font-style: normal;
+}
+
+.a {
+    list-style-type: lower-roman;
+}
+
+.b {
+    list-style-type: lower-latin;
+}
+
+.c {
+    list-style-type: square;
+}
+
+.d {
+    list-style-type: "$";
+}
+
+a.link_challenge {
+    color: #0096FF;
+}
+
+a.no-underline {
+    text-decoration: none;
+}

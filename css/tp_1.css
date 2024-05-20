@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+    color: #33FF00;
+    font-family: monospace;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
