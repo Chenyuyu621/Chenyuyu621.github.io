@@ -71,7 +71,9 @@
   <script>
     var pathname = window.location.pathname;
     var cleanPath = pathname.substring(pathname.lastIndexOf('/') + 1);
-    $('[href*="' + cleanPath + '"]').addClass('active');
+    document.querySelectorAll('a[href*="' + cleanPath + '"]').forEach(function(link) {
+      link.classList.add('active');
+    });
   </script>
 </body>
 </html>
